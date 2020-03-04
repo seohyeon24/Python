@@ -1,0 +1,31 @@
+#string 자료형 특징
+#index와 value 두 가지 정보를 가진다.
+
+#index: 문자열에서 어떤 문자의 순서 정보를 의미한다. - 1이 아니라 0부터 숫자를 세기 시작한다.
+#value: 문자열에서 어떤 문자가 갖고 있는 실제 정보(숫자, 알파벳, 한글)
+
+print("문자 선택 연산자에 대해 알아볼까요?")
+print("안녕하세요"[0])
+print("안녕하세요"[1])
+print("안녕하세요"[2])
+print("안녕하세요"[-1]) #맨 뒤에서 첫 번째
+
+#string-slicing: 인덱스 넘버의 범위 정보를 가져오는 코딩
+print("안녕하세요"[0:2])
+print("안녕하세요"[:4])
+
+#replace: string의 특정 문자를 다른 문자로 바꿔주는 것
+change="a,b,c,d,e,f"
+print(change)
+print(change.replace(",",""))
+
+change_1="aa,bb,cc,dd,ee,ff"
+print(change_1.replace("bb","aa"))
+
+#strip: 문자열 양옆의 공백을 제거, istrip:문자열 왼쪽의 공백을 제거, rstrip: 문자열 오른쪽의 공백 제거
+input_a="   안녕하세"
+
+print(input_a)
+print(input_a.strip()) #strip함수는 ()안에 공백상태를 유지한다.
+
+#chaining:한 행에 여러문법을 사용하는 것
