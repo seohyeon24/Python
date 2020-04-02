@@ -107,3 +107,127 @@ print(array)
 
 # [0, 4, 16, 36, 64, 100, 144, 196, 256, 324]
 # append - 제곱해서 새로운 리스트를 만든다.
+# 함수 만들기
+# 함수의 기본 함수= '코드의 집합'
+# 함수를 생성하는 기본 형태
+# def 함수 이름():
+    # 문장
+def print_3_times():
+    print("안녕하세요")
+    print("안녕하세요")
+    print("안녕하세요")
+
+print_3_times() #print_3_times 출력
+
+# 함수에 매개변수 만들기
+
+# def 함수 이름(매개변수, 매개변수, ....)
+#      문장
+
+def print_n_times(value,n):
+    for i in range(n):
+        print(value)
+
+print_n_times("안녕하세요",5)
+# 안녕하세요
+# 안녕하세요
+# 안녕하세요
+# 안녕하세요
+# 안녕하세요
+
+# 가변 매개변수
+# def 함수 이름(매개변수, 매개변수, ...., *가변 매개변수):
+#     문장
+
+def print_n_times(n, *values):
+    # n번 반복합니다.
+    for i in range(n):
+        # values는 리스트처럼 활용합니다.
+        for value in values:
+            print(value)
+            # 단순한 줄바꿈
+            print()
+# 함수를 호출합니다.
+print_n_times(3,"안녕하세요", "즐거운", "파이썬프로그래밍")
+# 안녕하세요
+#
+# 즐거운
+#
+# 파이썬프로그래밍
+#
+# 안녕하세요
+#
+# 즐거운
+#
+# 파이썬프로그래밍
+#
+# 안녕하세요
+#
+# 즐거운
+#
+# 파이썬프로그래밍
+
+# 기본 매개변수
+def print_n_times(value, n=2):
+    # n번 반복합니다.
+    for i in range(n):
+        print(value) # 들여쓰기를 제대로 해야 프로그래밍이 원활하게 돌아간다.
+# 함수를 호출합니다.
+print_n_times("안녕하세요")
+
+# 안녕하세요
+# 안녕하세요
+
+# 키워드 매개변수
+# 기본 매개변수가 가변 매개변수보다 앞에 올 때
+# def print_n_times(n=2, *values):
+#     # n번 반복합니다.
+#     for i in range(n):
+#         for value in values:
+#             print(value)
+#     # 단순한 줄바꿈
+#     print()
+# # 함수로 호출합니다.
+# print_n_times("안녕하세요","즐거운","파이썬 프로그래밍")
+
+# TypeError: 'str' object cannot be interpreted as an integer
+
+# 가변매개변수가 기본 매개변수보다 앞에 올 때
+def print_n_times(*values, n=2):
+    # n번 반복합니다.
+    for i in range(n):
+        for value in values:
+            print(value)
+    # 단순한 줄바꿈
+        print()
+# 함수로 호출합니다.
+print_n_times("안녕하세요","즐거운","파이썬 프로그래밍",3)
+# 안녕하세요
+# 즐거운
+# 파이썬 프로그래밍
+# 3
+#
+# 안녕하세요
+# 즐거운
+# 파이썬 프로그래밍
+# 3
+
+# 키워드 매개변수
+
+# while 반복문을 사용합니다.
+# while True:
+#     # "."을 출력합니다.
+#     # 기본적으로 end가 "\n"이라 줄바꿈일 일어나는데,
+#     # 빈 문자열 ""로 바꿔서 줄바꿈이 일어나지 않게 합니다.
+#     print(".", end="")
+
+def print_n_times(*vavlues, n=2):
+    # n번 반복합니다.
+     for i in range(n):
+         # values는 리스트처럼 활용합니다.
+        for value in values:
+            print(value)
+            # 단순한 줄바꿈
+            print()
+# 함수를 호출합니다.
+print_n_times("안녕하세요","즐거운","파이썬 프로그래밍", n=3)
